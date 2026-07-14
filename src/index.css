@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Archivo+Black&family=Caveat:wght@400..700&family=JetBrains+Mono:wght@400;500;700;800&family=Playfair+Display:wght@700;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #e63920;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Archivo Black', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #f8f6f0;
+  color: #111827;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { 
+  background: #f8f6f0; 
+  border-left: 2px solid #111827; 
+}
+::-webkit-scrollbar-thumb { 
+  background: #111827; 
+  border: 2px solid #f8f6f0; 
+}
+::-webkit-scrollbar-thumb:hover { 
+  background: #e63920; 
+}
+
+/* ─── Selection ─── */
+::selection { background: #e63920; color: #fff; }
+
+/* ─── Brutalist Grid Background ─── */
+.bg-grid {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(17,24,39,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17,24,39,0.05) 1px, transparent 1px);
+}
